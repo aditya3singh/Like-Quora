@@ -1,0 +1,74 @@
+*{
+    text-decoration: none;
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(214, 50, 31);
+}
+
+.create-post {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.create-button {
+    background-color: rgb(48, 59, 55);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover {
+    background-color: rgb(60, 80, 70);
+}
+
+.poster {
+    background-color: rgb(48, 59, 55);
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.user {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.content {
+    font-style: oblique;
+    margin: 10px 0 0;
+    margin-bottom: 15px;
+}
+
+.shows{
+    display: inline-flex;
+    justify-content: end;
+    color: azure;
+}
+.edits{
+    color: chocolate;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.deletes{
+    color: red;
+    text-decoration: none;
+    margin: 15px;
+}

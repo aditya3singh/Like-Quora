@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Posts</title>
+    <link rel="stylesheet" href="/pub.css">
+</head>
+<body>
+    <h1>Quora Posts</h1>
+    <div class="create-post">
+        <a href="/posts/new" class="create-button">Create New Post</a>
+    </div>
+    <% if (posts.length === 0) { %>
+        <p>No posts yet. <a href="/posts/new">Be the first to post!</a></p>
+        <% } else { %>
+            <% for (let post of posts) { %>
+                <div class="poster">
+                    <h3 class="user">@<%= post.userName %></h3>
+                    <p class="content"><%= post.content %></p>
+                    <a href="/posts/<%= post.id %>" class="shows">Post in detail</a>
+                    <a href="/posts/<%= post.id %>/edit" class="edits">Edit</a>
+                    <form action="/posts/<%= post.id%>?_method=DELETE" method="post">
+                        <button class="deletes">Delete</button>
+                    </form>
+                </div>
+                <% } %>
+                <% } %>
+</body>
+</html>
