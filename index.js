@@ -6,7 +6,6 @@ const path = require("path");
 const { v4: uuidv4 } = require('uuid'); // To generate unique IDs
 const methodOverride = require("method-override");
 
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -42,8 +41,6 @@ app.get("/posts/:id", (req, res) => {
     const post = posts.find((p) => p.id === id);
     res.render("show", { post }); // Render the show.ejs page and pass the post object to it 
 });
-
-
 
 app.patch("/posts/:id", (req, res) => {
     const { id } = req.params;
